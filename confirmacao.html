@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Confirmação de Reserva - Pet Love</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <h1><img src="./img/logo_petz.png" height="60px" width="150px" alt="Pet Love"></h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="button">Home</a></li>
+        <li><a href="sobre.html" class="button">Sobre</a></li>
+        <li><a href="servicos.html" class="button">Serviços</a></li>
+        <li><a href="contato.html" class="button">Contato</a></li>
+        <li><a href="cadastro.html" class="button">Cadastro</a></li>
+        <li><a href="login.html" class="button">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="confirmation-section">
+    <div class="container">
+      <h2>Reserva Confirmada!</h2>
+      <p>Parabéns, sua reserva foi realizada com sucesso. Aqui estão os detalhes:</p>
+      
+      <div class="reservation-details">
+        <div class="detail-item">
+          <h3>Quarto Selecionado:</h3>
+          <p id="quartoConfirmado">Casinha 1</p>
+        </div>
+        <div class="detail-item">
+          <h3>Check-In:</h3>
+          <p id="checkInConfirmado">2024-11-20</p>
+        </div>
+        <div class="detail-item">
+          <h3>Check-Out:</h3>
+          <p id="checkOutConfirmado">2024-11-22</p>
+        </div>
+      </div>
+
+      <a href="perfil.html?quartoSelecionado=Casinha%201&dataEntrada=2024-11-20&dataSaida=2024-11-22" class="btn-voltar">
+        Voltar para o Perfil
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 Pet Love - Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+    // Captura os parâmetros passados pela URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const quarto = urlParams.get('quartoSelecionado');
+    const dataEntrada = urlParams.get('dataEntrada');
+    const dataSaida = urlParams.get('dataSaida');
+
+    // Preenche os campos da tela com os dados recebidos
+    document.getElementById('quartoConfirmado').textContent = quarto || 'Indefinido';
+    document.getElementById('checkInConfirmado').textContent = dataEntrada || 'Indefinido';
+    document.getElementById('checkOutConfirmado').textContent = dataSaida || 'Indefinido';
+
+    function guardarReserva() {
+      localStorage.setItem("quartoSelecionado", quarto);
+      localStorage.setItem("dataEntrada", dataEntrada);
+      localStorage.setItem("dataSaida", dataSaida);
+      window.location.href = 'perfil.html'; // Redireciona para o perfil
+      }
+  </script>
+</body>
+</html>

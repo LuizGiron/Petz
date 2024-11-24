@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Acomodação - Pet Love</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <h1><img src="./img/logo_petz.png" height="60px" width="150px" alt=""></h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="button">Home</a></li>
+        <li><a href="sobre.html" class="button">Sobre</a></li>
+        <li><a href="servicos.html" class="button">Serviços</a></li>
+        <li><a href="contato.html" class="button">Contato</a></li>
+        <li><a href="cadastro.html" class="button">Cadastro</a></li>
+        <li><a href="login.html" class="button">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="section">
+    <div class="container">
+      <h2>Acomodações</h2>
+      <div id="quartosContainer">
+        <!-- Quartos serão carregados aqui -->
+      </div>
+      <section class="mapa-acomodacao">
+        <div class="container">
+            <div class="mapa">
+                <div class="quarto" id="quarto1">
+                    <div class="info-quarto">
+                        <h3>Casinha 1</h3>
+                        <p>Quarto duplo com vista para o jardim</p>
+                        <button class="btn-reservar" onclick="reservar('Casinha 1')">Reservar</button>
+                    </div>
+                </div>
+                <div class="quarto" id="quarto2">
+                    <div class="info-quarto">
+                        <h3>Casinha 2</h3>
+                        <p>Quarto individual com vista para a piscina</p>
+                        <button class="btn-reservar" onclick="reservar('Casinha 2')">Reservar</button>
+                    </div>
+                </div>
+                <div class="quarto" id="quarto3">
+                    <div class="info-quarto">
+                        <h3>Casinha 3</h3>
+                        <p>Quarto para casal com varanda</p><br>
+                        <button class="btn-reservar" onclick="reservar('Casinha 3')">Reservar</button>
+                    </div>
+                </div>
+                <div class="quarto" id="quarto4">
+                    <div class="info-quarto">
+                        <h3>Casinha 4</h3>
+                        <p>Quarto com duas camas de solteiro</p>
+                        <button class="btn-reservar" onclick="reservar('Casinha 4')">Reservar</button>
+                    </div>
+                </div>
+                <div class="quarto ocupado" id="quarto5">
+                  <div class="info-quarto">
+                      <h3>Casinha 5</h3>
+                      <p>Quarto duplo com vista para o jardim</p>
+                      <button class="btn-reservar" disabled>Ocupado</button>
+                  </div>
+              </div>
+              <div class="quarto ocupado" id="quarto6">
+                  <div class="info-quarto">
+                      <h3>Casinha 6</h3>
+                      <p>Quarto individual com vista para a piscina</p>
+                      <button class="btn-reservar" disabled>Ocupado</button>
+                  </div>
+              </div>
+              <div class="quarto ocupado" id="quarto7">
+                  <div class="info-quarto">
+                      <h3>Casinha 7</h3>
+                      <p>Quarto para casal com varanda</p><br>
+                      <button class="btn-reservar" disabled>Ocupado</button>
+                  </div>
+              </div>
+              <div class="quarto ocupado" id="quarto8">
+                  <div class="info-quarto">
+                      <h3>Casinha 8</h3>
+                      <p>Quarto com duas camas de solteiro</p>
+                      <button class="btn-reservar" disabled>Ocupado</button>
+                  </div>
+            </div>
+        </div>
+      </section>
+
+      <section class="detalhes-reserva">
+        <h3>Selecione as Datas para sua Estadia</h3>
+        
+        <label for="dataCheckIn">Data de Check-In:</label>
+        <input type="date" id="dataCheckIn" required>
+
+        <label for="dataCheckOut">Data de Check-Out:</label>
+        <input type="date" id="dataCheckOut" required>
+
+        <form id="reservaForm" method="GET" action="confirmacao.html">
+          <input type="hidden" id="quartoSelecionado" name="quartoSelecionado">
+          <input type="hidden" id="dataEntrada" name="dataEntrada">
+          <input type="hidden" id="dataSaida" name="dataSaida">
+          <button type="button" class="btn-confirmar" onclick="enviarFormulario()">Confirmar Reserva</button>
+        </form>
+      </section>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 Pet Love - Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="acomodacao.js"></script>
+</body>
+</html>

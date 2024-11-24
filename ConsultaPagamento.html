@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Consulta Pagamentos - Hotel Petz</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+          <h1> <img src="./img/logo_petz.png" height="60px" width="150px" alt=""></h1>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="TelaReservas.html" class="button">Reservar</a></li>
+            <li><a href="ConsultaReservas.html" class="button">Consulta Reservas</a></li>
+            <li><a href="Checkin.html" class="button">Check-In</a></li>
+            <li><a href="RegistroConsumo.html" class="button">Consumos</a></li>
+            <li><a href="Checkout.html" class="button">Check-Out</a></li>
+            <li><a href="AcompanhamentoHospedagem.html" class="button">Acompanhamento Hospedagem</a></li>
+            <li><a href="ConsultaPagamento.html" class="button">Pagamentos</a></li>
+            <li><a href="ExtratoConta.html" class="button">Extratos</a></li>
+          </ul>
+        </nav>
+      </header>
+  <div class="container">
+    <h1>Pagamentos Pendentes</h1>
+    <table id="tabelaPagamentos">
+      <thead>
+        <tr>
+          <th>Nome do Pet</th>
+          <th>Nome do Cliente</th>
+          <th>Número da Acomodação</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Dados serão inseridos dinamicamente -->
+      </tbody>
+    </table>
+  </div>
+  <footer>
+    <p>&copy; 2024 Petz - Todos os direitos reservados.</p>
+  </footer>
+  <script src="ConsultaPagamento.js"></script>
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta de Reservas - Hotel Petz</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <h1> <img src="./img/logo_petz.png" height="60px" width="150px" alt=""></h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="TelaReservas.html" class="button">Reservar</a></li>
+                <li><a href="ConsultaReservas.html" class="button">Consulta Reservas</a></li>
+                <li><a href="Checkin.html" class="button">Check-In</a></li>
+                <li><a href="RegistroConsumo.html" class="button">Consumos</a></li>
+                <li><a href="Checkout.html" class="button">Check-Out</a></li>
+                <li><a href="AcompanhamentoHospedagem.html" class="button">Acompanhamento Hospedagem</a></li>
+                <li><a href="ConsultaPagamento.html" class="button">Pagamentos</a></li>
+                <li><a href="ExtratoConta.html" class="button">Extratos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <table id="tabelaReservas">
+            <thead>
+                <tr>
+                    <th>Nome do Cliente</th>
+                    <th>Nome do Pet</th>
+                    <th>Acomodação</th>
+                    <th>Data de Entrada</th>
+                    <th>Data de Saída</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- As reservas serão preenchidas aqui -->
+            </tbody>
+        </table>
+    </div>
+    <section class="section">
+        <div class="container">
+            <h2>Acomodações</h2>
+            <div id="quartosContainer">
+                <!-- Quartos serão carregados aqui -->
+            </div>
+            <section class="mapa-acomodacao">
+                <div class="container">
+                    <div class="mapa">
+                        <div class="quarto" id="quarto1">
+                            <div class="info-quarto">
+                                <h3><img src="./img/pet-house (2).png" alt=""><br>Casinha 1</h3>
+                                <p>Cama acolhedora e espaço amplo para o seu pet relaxar. Perfeita para momentos de
+                                    descanso com ambiente tranquilo e arejado.</p>
+                                <button class="btn-reservar" onclick="reservar('Casinha 1')">Reservar</button>
+                            </div>
+                        </div>
+                        <div class="quarto" id="quarto2">
+                            <div class="info-quarto">
+                                <h3><img src="./img/pet-house (2).png" alt=""><br>Casinha 2</h3>
+                                <p>Ambiente confortável com cama macia e iluminação suave, ideal para o seu pet dormir
+                                    tranquilamente e se sentir em casa.</p>
+                                <button class="btn-reservar" onclick="reservar('Casinha 2')">Reservar</button>
+                            </div>
+                        </div>
+                        <div class="quarto" id="quarto3">
+                            <div class="info-quarto">
+                                <h3><img src="./img/pet-house (2).png" alt=""><br>Casinha 3</h3>
+                                <p>Casinha espaçosa e confortável, com cama adaptada para o seu pet, criando um ambiente
+                                    seguro e acolhedor para uma boa noite de sono.</p><br>
+                                <button class="btn-reservar" onclick="reservar('Casinha 3')">Reservar</button>
+                            </div>
+                        </div>
+                        <div class="quarto" id="quarto4">
+                            <div class="info-quarto">
+                                <h3><img src="./img/pet-house (2).png" alt=""><br>Casinha 4</h3>
+                                <p>Com espaço adequado e cama aconchegante, esta casinha proporciona ao seu pet um lugar
+                                    tranquilo para descansar, com todo o conforto que ele merece.</p>
+                                <button class="btn-reservar" onclick="reservar('Casinha 4')">Reservar</button>
+                            </div>
+                        </div>
+                        <div class="quarto ocupado" id="quarto5">
+                            <div class="info-quarto">
+                                <h3><img src="./img/pet-house (2).png" alt=""><br>Casinha 5</h3>
+                                <p>Oferece um espaço confortável com cama macia, garantindo que seu pet tenha uma
+                                    estadia tranquila e relaxante.</p>
+                                <button class="btn-reservar" disabled>Ocupado</button>
+                            </div>
+                        </div>
+                        <div class="quarto ocupado" id="quarto6">
+                            <div class="info-quarto">
+                                <h3><img src="./img/pet-house (2).png" alt=""><br>Casinha 6</h3>
+                                <p>Ambiente acolhedor e cama de qualidade, proporcionando um descanso reparador para seu
+                                    pet, longe de barulhos e distrações.</p>
+                                <button class="btn-reservar" disabled>Ocupado</button>
+                            </div>
+                        </div>
+                        <div class="quarto ocupado" id="quarto7">
+                            <div class="info-quarto">
+                                <h3><img src="./img/pet-house (2).png" alt=""><br>Casinha 7</h3>
+                                <p>Com um espaço confortável e cama feita para proporcionar tranquilidade, esta casinha
+                                    oferece ao seu pet uma estadia confortável e segura.</p><br>
+                                <button class="btn-reservar" disabled>Ocupado</button>
+                            </div>
+                        </div>
+                        <div class="quarto ocupado" id="quarto8">
+                            <div class="info-quarto">
+                                <h3><img src="./img/pet-house (2).png" alt=""><br>Casinha 8</h3>
+                                <p>Cama confortável e ambiente privativo para o seu pet, garantindo conforto e paz para
+                                    ele relaxar durante a estadia.</p>
+                                <button class="btn-reservar" disabled>Ocupado</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2024 Petz - Todos os direitos reservados.</p>
+      </footer>
+    <script src="ConsultaReservas.js"></script>
+</body>
+
+</html>

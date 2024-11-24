@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perfil - Pet Love</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <h1><h1> <img src="./img/logo_petz.png" height="60px" width="150px" alt=""></h1></h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="button">Home</a></li>
+        <li><a href="sobre.html" class="button">Sobre</a></li>
+        <li><a href="servicos.html" class="button">Serviços</a></li>
+        <li><a href="contato.html" class="button">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="section">
+    <div class="container">
+      <h2>Perfil do Usuário</h2>
+      <div id="perfil-container" class="perfil-clean">
+        <div class="foto-section">
+          <img id="fotoTutor" class="foto" src="default-tutor.jpg" alt="Foto do Tutor">
+          <label for="inputFotoTutor" class="upload-button">
+            Escolher foto
+          </label>
+          <input id="inputFotoTutor" type="file" accept="image/*" class="input-foto">
+        </div>
+        <div class="info-section">
+          <h1 class="nome" id="nomeTutor"></h1>
+          <p><strong>Email:</strong> <span id="email"></span></p>
+          <p><strong>CPF:</strong> <span id="cpf"></span></p>
+          <p><strong>Pet:</strong> <span id="nomePet"></span></p>
+        </div>
+        <div class="foto-section">
+          <img id="fotoPet" class="foto" src="default-pet.jpg" alt="Foto do Pet">
+          <label for="inputFotoPet" class="upload-button">
+            Escolher foto
+          </label>
+          <input id="inputFotoPet" type="file" accept="image/*" class="input-foto">
+        </div>
+        <div class="historico-container">
+          <h2>Histórico de Serviços</h2>
+          <div id="historico"></div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 Pet Love - Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

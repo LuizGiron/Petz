@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alteração de Reservas - Hotel Petz</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">
+          <h1><img src="./img/logo_petz.png" height="60px" width="150px" alt=""></h1>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="TelaReservas.html" class="button">Reservar</a></li>
+            <li><a href="ConsultaReservas.html" class="button">Consulta Reservas</a></li>
+            <li><a href="Checkin.html" class="button">Check-In</a></li>
+            <li><a href="RegistroConsumo.html" class="button">Consumos</a></li>
+            <li><a href="Checkout.html" class="button">Check-Out</a></li>
+            <li><a href="ConsultaPagamento.html" class="button">Pagamentos</a></li>
+            <li><a href="ExtratoConta.html" class="button">Extratos</a></li>
+          </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+      <h2>Alteração de Reservas</h2>
+      <form id="formAlteracaoReserva">
+        <label for="nomeCliente">Nome do Cliente:</label>
+        <input type="text" id="nomeCliente" name="nomeCliente" required>
+      
+        <label for="telefoneCliente">Telefone do Cliente:</label>
+        <input type="text" id="telefoneCliente" name="telefoneCliente" required>
+      
+        <label for="nomePet">Nome do Pet:</label>
+        <input type="text" id="nomePet" name="nomePet" required>
+      
+        <label for="acomodacao">Acomodação:</label>
+        <input type="text" id="acomodacao" name="acomodacao" required>
+      
+        <label for="dataEntrada">Data de Entrada:</label>
+        <input type="date" id="dataEntrada" name="dataEntrada" required>
+      
+        <label for="dataSaida">Data de Saída:</label>
+        <input type="date" id="dataSaida" name="dataSaida" required>
+      
+        <!-- Campo escondido para armazenar o índice da reserva -->
+        <input type="hidden" id="reservaIndex">
+      
+        <button type="submit">Salvar Alterações</button>
+      </form>
+      
+    </div>
+    <footer>
+        <p>&copy; 2024 Petz - Todos os direitos reservados.</p>
+      </footer>
+    <script src="AlteracaoReservas.js"></script>
+</body>
+</html>

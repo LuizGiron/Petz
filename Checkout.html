@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout - Hotel Petz</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">
+          <h1> <img src="./img/logo_petz.png" height="60px" width="150px" alt=""></h1>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="TelaReservas.html" class="button">Reservar</a></li>
+            <li><a href="ConsultaReservas.html" class="button">Consulta Reservas</a></li>
+            <li><a href="Checkin.html" class="button">Check-In</a></li>
+            <li><a href="RegistroConsumo.html" class="button">Consumos</a></li>
+            <li><a href="Checkout.html" class="button">Check-Out</a></li>
+            <li><a href="AcompanhamentoHospedagem.html" class="button">Acompanhamento Hospedagem</a></li>
+            <li><a href="ConsultaPagamento.html" class="button">Pagamentos</a></li>
+            <li><a href="ExtratoConta.html" class="button">Extratos</a></li>
+          </ul>
+        </nav>
+      </header>
+
+  <div class="container">
+    <form id="formCheckout">
+        <label for="numeroAcomodacao">Número da Acomodação:</label>
+        <input type="text" id="numeroAcomodacao" required>
+      
+        <label for="petNome">Nome do Pet:</label>
+        <input type="text" id="petNome" required>
+      
+        <label for="valorEstadia">Valor da Estadia (R$):</label>
+        <input type="number" step="0.01" id="valorEstadia" required>
+      
+        <label for="valorAlimentacao">Valor da Alimentação (R$):</label>
+        <input type="number" step="0.01" id="valorAlimentacao">
+      
+        <label for="servicosAdicionais">Serviços Adicionais (R$):</label>
+        <input type="number" step="0.01" id="servicosAdicionais">
+      
+        <label for="total">Total (R$):</label>
+        <input type="number" step="0.01" id="total" readonly>
+      
+        <label for="formaPagamento">Forma de Pagamento:</label>
+        <select id="formaPagamento" required>
+          <option value="Cartão de Crédito">Cartão de Crédito</option>
+          <option value="Cartão de Débito">Cartão de Débito</option>
+          <option value="Dinheiro">Dinheiro</option>
+          <option value="Pix">Pix</option>
+        </select>
+      
+        <button type="submit">Finalizar Checkout</button>
+    </form>
+
+    <!-- Seção de consumos -->
+    <div id="consumosContainer">
+        <h3>Consumos:</h3>
+        <table id="tabelaConsumos">
+            <thead>
+                <tr>
+                    <th>Número da Acomodação</th>
+                    <th>Consumo</th>
+                    <th>Quantidade</th>
+                    <th>Preço</th>
+                    <th>Data de Consumo</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Os consumos serão listados aqui -->
+            </tbody>
+        </table>
+    </div>
+  </div>
+  <footer>
+    <p>&copy; 2024 Petz - Todos os direitos reservados.</p>
+  </footer>
+  <script src="Checkout.js"></script>
+</body>
+</html>

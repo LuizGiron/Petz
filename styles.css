@@ -1,0 +1,940 @@
+/* Estilos Gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F5F5F5;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  header {
+    background-color: #ffffff;  /* Cor vibrante (laranja) */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 10;
+  }
+  
+  header nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 10px;
+  }
+  
+  header nav ul li {
+    display: inline;
+    margin: 0 20px;
+  }
+  
+  header nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+  }
+  
+  header nav ul li a:hover {
+    color: #FFD700; /* Dourado */
+  }
+  
+  header .logo {
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #333;
+    color: white;
+  }
+  
+  footer p {
+    font-size: 14px;
+  }
+  
+  button, .button {
+    background-color: #175EA8;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 16px;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  button:hover, .button:hover {
+    background-color: #124174; /* Cor mais forte para hover */
+    transform: scale(1.1);  /* Animação de aumento de tamanho */
+  }
+  
+  /* Seções */
+  .section {
+    padding: 60px 20px;
+  }
+  
+  .container {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+  }
+  
+  h2 {
+    color: #175EA8;  /* Laranja vibrante */
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  h3 {
+    font-size: 1.8rem;
+    color: #333;
+    margin: 20px 0;
+    font-weight: 600;
+  }
+  
+  p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.7;
+  }
+  
+  .servico {
+    background-color: white;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .servico:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 50px rgba(0, 0, 0, 0.2);
+  }
+  
+  .servico h3 {
+    color: #175EA8;
+    font-size: 2rem;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 30px;
+    max-width: 600px;
+    margin: 30px auto;
+  }
+  
+  form input, form textarea {
+    padding: 14px;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    transition: border-color 0.3s ease;
+  }
+  
+  form input:focus, form textarea:focus {
+    border-color: #175EA8;
+    outline: none;
+  }
+  
+  form button {
+    align-self: center;
+    font-size: 1.2rem;
+    padding: 15px 30px;
+    border-radius: 50px;
+    background-color: #175EA8;
+    border: none;
+  }
+  
+  /* Estilos Responsivos */
+  @media (max-width: 768px) {
+    header {
+      padding: 15px 0;
+    }
+  
+    header nav ul li {
+      display: block;
+      margin: 10px 0;
+    }
+  
+    .section {
+      padding: 40px 20px;
+    }
+  
+    .container {
+      padding: 0 20px;
+    }
+  
+    h2 {
+      font-size: 2.5rem;
+    }
+  
+    h3 {
+      font-size: 1.5rem;
+    }
+  
+    .servico {
+      padding: 20px;
+    }
+  
+    form {
+      width: 100%;
+    }
+  
+    form input, form textarea {
+      width: 100%;
+    }
+  }
+  /* Estilo para a tela de cadastro */
+input {
+  margin-bottom: 15px;
+}
+
+form {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+form input {
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  width: 100%;
+  transition: border-color 0.3s ease;
+}
+
+form input:focus {
+  border-color: #175EA8;
+  outline: none;
+}
+
+h2 {
+  color: #175EA8;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+form button {
+  padding: 14px 30px;
+  background-color: #175EA8;
+  border-radius: 50px;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+}
+
+form button:hover {
+  background-color: #124174;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  position: fixed; /* Garante que o footer fique fixado no final, mas dentro do fluxo */
+  width: 100%;
+  bottom: 0;
+}
+/* Estilo para o link de Acomodações */
+.tituloServico {
+  color: inherit; /* Herda a cor do texto ao invés de ser azul */
+  text-decoration: none; /* Remove o sublinhado padrão */
+  font-weight: bold; /* Deixa o texto em negrito */
+  cursor: pointer; /* Muda o cursor para uma mãozinha */
+}
+
+/* Adiciona um efeito de hover, caso queira que o título tenha uma mudança visual quando o usuário passar o mouse */
+.tituloServico:hover {
+  color: #FFD700; /* Cor de destaque ao passar o mouse */
+}
+#map {
+  height: 500px;
+  width: 100%;
+  border: 2px solid #007BFF;
+  margin-top: 20px;
+}
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+}
+
+#perfil-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 600px;
+  margin: 50px auto;
+  background: white;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.foto-section {
+  position: relative;
+  background-color: #ececec;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.foto {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid white;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.input-foto {
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+  cursor: pointer;
+}
+
+.info-section {
+  padding: 20px;
+  text-align: center;
+}
+
+.info-section h1 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.info-section p {
+  margin: 5px 0;
+  color: #666;
+}
+
+.info-section p strong {
+  color: #333;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+}
+.input-foto:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+@media (max-width: 768px) {
+  #perfil-container {
+    width: 90%;
+  }
+
+  .foto-section {
+    padding: 10px;
+  }
+}
+.input-foto {
+  display: none; /* Esconde o botão padrão */
+}
+
+.upload-button {
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+  background-color: #175EA8;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.upload-button:hover {
+  background-color: #124174;
+  transform: scale(1.05);
+}
+
+.upload-button:active {
+  background-color: #175EA8;
+  transform: scale(0.98);
+}
+.historico-container {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.historico-container h2 {
+  margin-bottom: 15px;
+  color: #333;
+  font-size: 18px;
+  border-bottom: 2px solid #175EA8;
+  display: inline-block;
+}
+
+.historico-item {
+  margin-bottom: 15px;
+  padding: 15px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.historico-item p {
+  margin: 5px 0;
+}
+
+.historico-item strong {
+  color: #175EA8;
+}
+
+#historico p {
+  font-size: 16px;
+  color: #555;
+  text-align: center;
+}
+/* Mapa de Acomodação */
+.mapa-acomodacao {
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+}
+
+.mapa-acomodacao h2 {
+  text-align: center;
+  color:#175EA8;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+.mapa {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+.quarto {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 300px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.quarto:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.info-quarto h3 {
+  color: #175EA8; /* Verde para o nome do quarto */
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.info-quarto p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.btn-reservar {
+  background-color: #175EA8; /* Verde */
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 16px;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-reservar:hover {
+  background-color: #124174; /* Verde mais escuro */
+  transform: scale(1.1);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .mapa {
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+
+  .quarto {
+      padding: 15px;
+  }
+
+  .info-quarto h3 {
+      font-size: 1.2rem;
+  }
+
+  .btn-reservar {
+      font-size: 14px;
+  }
+}
+/* Estilos gerais */
+input[type="date"] {
+  padding: 10px;
+  font-size: 1rem;
+  width: 100%;
+  max-width: 300px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  transition: border-color 0.3s ease;
+  margin-bottom: 20px;
+}
+
+input[type="date"]:focus {
+  border-color: #175EA8; /* Verde quando estiver em foco */
+  outline: none;
+}
+
+label {
+  display: block;
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 8px;
+  text-align: left;
+}
+
+.detalhes-reserva {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h3 {
+  text-align: center;
+  color: #175EA8;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.btn-confirmar {
+  background-color: #175EA8;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 16px;
+  text-transform: uppercase;
+  width: 100%;
+  max-width: 250px;
+  margin-top: 20px;
+}
+
+.btn-confirmar:hover {
+  background-color: #124174;
+}
+/* Estilo para casinhas ocupadas */
+.quarto.ocupado {
+  opacity: 0.5; /* Diminui a opacidade para indicar que está desabilitado */
+  pointer-events: none; /* Impede interações com a casinha */
+}
+
+.quarto.ocupado .btn-reservar {
+  background-color: #ccc; /* Muda a cor do botão para cinza */
+  cursor: not-allowed; /* Muda o cursor para indicar que não é clicável */
+}
+
+.quarto .btn-reservar {
+  cursor: pointer; /* Indica que o botão pode ser clicado */
+}
+
+.quarto.selecionada {
+  border: 2px solid #175EA8; /* Exemplo: borda laranja */
+}
+
+.quarto .btn-reservar:disabled {
+  background-color: #CCCCCC; /* Exemplo: cor do botão desabilitado */
+  cursor: not-allowed;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+}
+.confirmation-section {
+  background-color: #fff;
+  padding: 40px;
+  margin: 30px auto;
+  border-radius: 10px;
+  max-width: 600px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.confirmation-section h2 {
+  font-size: 2rem;
+  color: #175EA8;
+  margin-bottom: 20px;
+}
+
+.confirmation-section p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  color: #555;
+}
+
+.reservation-details {
+  margin-bottom: 30px;
+}
+
+.detail-item {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.detail-item h3 {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.detail-item p {
+  font-size: 1.1rem;
+  color: #777;
+  margin-top: 5px;
+}
+.btn-voltar {
+  background-color: #175EA8;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 16px;
+  text-transform: uppercase;
+  width: 100%;
+  max-width: 250px;
+  margin-top: 20px;
+}
+
+.btn-voltar:hover {
+  background-color: #124174;
+}
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #175EA8;
+}
+
+form fieldset {
+  margin-bottom: 20px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+legend {
+  font-weight: bold;
+  color: #333;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #175EA8;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #124174;
+}
+
+.acomodacoes {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.quarto {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-align: center;
+  cursor: pointer;
+  background-color: #f9f9f9;
+}
+
+.quarto:hover {
+  background-color: #bcdcff;
+  color: white;
+}
+
+.quarto.selecionado {
+  background-color: #bcdcff;
+  color: white;
+}
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #175EA8;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table th, table td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+table th {
+  background-color: #175EA8;
+  color: white;
+}
+
+table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+table tbody tr:hover {
+  background-color: #ddedff;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+}
+
+.details-row {
+  background-color: #f1f1f1;
+  display: none;
+}
+
+.details-row td {
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #175EA8;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input, select, textarea, button {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #175EA8;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table, th, td {
+  border: 1px solid #ddd;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:hover {
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+.detalhes {
+  margin-top: 30px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  background: #f9f9f9;
+  border-radius: 8px;
+}
+
+.botoes {
+  margin-top: 15px;
+  display: flex;
+  gap: 50px;
+}
+
+.btn {
+  padding: 10px 12px;
+  background-color: #175EA8;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn.cancelar {
+  background-color: #175EA8;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+/* Estilo para a linha selecionada */
+.reserva.selecionada {
+  background-color: #afc2d6; /* Tom de azul claro */
+  color: #000000; /* Texto em preto para boa visibilidade */
+}
+.btn.alterar {
+  background-color: #175EA8;
+}
+.btn:hover {
+  opacity: 0.9;
+}
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Acomodações - Hotel Pet Love</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+</head>
+<body>
+
+  <!-- Cabeçalho -->
+  <header>
+    <div class="logo">
+      <h1><h1> <img src="./img/logo_petz.png" height="60px" width="150px" alt=""></h1></h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="button">Home</a></li>
+        <li><a href="sobre.html" class="button">Sobre</a></li>
+        <li><a href="contato.html" class="button">Contato</a></li>
+        <li><a href="cadastro.html" class="button">Cadastro</a></li>
+        <li><a href="login.html" class="button">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Mapa de Acomodações -->
+  <section class="section">
+    <div class="container">
+      <h2>Mapa de Acomodações</h2>
+      <div id="map" style="height: 500px;"></div> <!-- Contêiner para o mapa -->
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 Hotel Pet Love. Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="mapa.js"></script>
+</body>
+</html>
